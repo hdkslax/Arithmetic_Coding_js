@@ -1,0 +1,153 @@
+/*global setting*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 12px;
+    background-color: #ccc;
+}
+
+a{
+    text-decoration: none;
+}
+input,button,a {
+    outline:0 none !important; blr:expression(this.onFocus=this.blur());
+}
+
+/*header*/
+.header{
+    height: 44px;
+    width: 100%;
+    background-color: #2459a2;
+}
+
+
+.header_content{
+    width: 80%;
+    height: 44px;
+    background-color: #2459a2;
+    margin: 0 auto;
+    line-height: 44px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: #ccc;
+    text-align: center;
+    position: relative;
+
+}
+
+
+/*content*/
+
+.content {
+    width: auto;
+    height: 2000px;
+}
+
+.left {
+    width: 50%;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    float: left;
+    background-color: skyblue;
+    font-size: 16px;
+}
+
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0
+}
+
+
+/*left style*/
+
+#inputshow, #result, .info{
+    margin: 10px;
+    font-size: 22px;
+    color: #2459a2;
+    display: inline-block;
+}
+
+#tree {
+    font-size: 14px;
+}
+
+
+
+/*right styles*/
+
+.btns {
+    display: inline-block;
+}
+
+.btns button {
+    margin: 10px;
+    padding: 0 auto;
+    width: 6em;
+    height: 2em;
+    border-radius:5px;
+    background-color: #ddd;
+    display: inline-block;
+    box-shadow: 0 3px 0 #333;
+    font-size: 16px;
+    color: #2459a2;
+}
+
+button:active{
+    position: relative;
+    top: 1px;
+}
+
+
+/*user input*/
+
+.userInput{
+    display: inline-block;
+    float: right;
+    margin: 5px;
+}
+
+input{
+    margin: 0;
+    padding: 0 5px;
+    width: 8em;
+    height: 2em;
+    border-width: 0 0 2px 0;
+    border-color: #2459a2;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 16px;
+    color: #2459a2;
+}
+
+#apply{
+    margin: 10px 10px 10px 0;
+    width: 6em;
+    height: 2em;
+    display: inline-block;
+    border-radius:5px;
+    background-color: #ddd;
+    box-shadow: 0 1px 0 #333;
+    font-size: 16px;
+    color: #2459a2;
+}
+
+.code{
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;
+    border: 2px solid #2459a2;
+}
+
+.highlight{
+    color: red;
+}

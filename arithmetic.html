@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Huffman.html</title>
+    <link rel="stylesheet" href="arithmetic.css" type="text/css">
+    <script type="text/javascript" src="arithmetic.js"></script>
+    <script type="text/javascript" src="draw.js"></script>
+    <script type="text/javascript"></script>
+</head>
+<body>
+<div class="header">
+    <p class="header_content">Arithmetic Coding</p>
+</div>
+<div class="clear">
+    <div id="j">0</div>
+</div>
+
+    <div class="left">
+        <div><span class="info">Input string: </span> <div id="inputshow"></div></div>
+        <div><span class="info">Result: </span> <div id="result"></div></div>
+
+        <canvas id="tree"></canvas>
+    </div>
+
+    <div class="right">
+
+        <div class="btns">
+            <button id="next" onclick="encoding(document.getElementById('inputshow').innerText)">Next</button>
+            <button onclick="location.reload()">reset</button>
+        </div>
+
+        <!--user input-->
+        <div class="userInput">
+            <input id="inputstr" type="text" value="input a string" onfocus="javascript:if(this.value=='input a string') this.value=''">
+            <button id="apply" onclick="get_input()"> Apply </button>
+        </div>
+
+
+        <div class="code">
+            <p>Algorithm ArithmeticCoding():</p> <br />
+            <p>Input: A string.</p> <br />
+            <p>Output: The arithmetic coding of the string.</p> <br />
+            <br />
+            <p style="padding-left: 1.8em">calculate all symbols frequency and cumulative density (CDF);</p><br />
+            <p style="padding-left: 1.8em">Initialization: low = 0.0, high = 1.0;</p><br />
+            <p style="padding-left: 1.8em">while (not EOF) {</p><br />
+            <p style="padding-left: 3.6em">n = ReadSymbol();</p><br />
+            <p style="padding-left: 3.6em">range = high - low;</p><br />
+            <p style="padding-left: 3.6em">high = low + range * CDF(n);</p><br />
+            <p style="padding-left: 3.6em">low = low + range * CDF(n-1);</p><br />
+            <p style="padding-left: 1.8em">}</p><br />
+            <p style="padding-left: 1.8em">output low;</p><br />
+        </div>
+    </div>
+</body>
+</html>
